@@ -4,11 +4,21 @@ export const isCountyCode = (st: string): boolean => {
   return regex.test(st);
 };
 
-export const getStatesString = (states: { name: string }[]): string =>
-  states.reduce(
-    (accumulator: string, currentValue: { name: string }, index: number) => {
-      const stateName = currentValue.name.split(' ').reverse().join(' ');
-      return `${accumulator}${index !== 0 ? ', ' : ''}${stateName}`;
-    },
-    ''
-  );
+export const getStatesString = (states: { name: string }[]): Promise<string> =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(
+        states.reduce(
+          (
+            accumulator: string,
+            currentValue: { name: string },
+            index: number
+          ) => {
+            const stateName = currentValue.name.split(' ').reverse().join(' ');
+            return `${accumulator}${index !== 0 ? ', ' : ''}${stateName}`;
+          },
+          ''
+        )
+      );
+    }, 0);
+  });

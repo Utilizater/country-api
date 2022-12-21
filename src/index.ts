@@ -22,7 +22,7 @@ app.get('/GetCountryDetails/:countryCode', async (req, res) => {
     const response: GetCountryResponse = {
       name,
       capital,
-      state_names: getStatesString(states),
+      state_names: await getStatesString(states),
     };
 
     if (name === '') {
