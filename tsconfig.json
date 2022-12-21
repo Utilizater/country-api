@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "resolveJsonModule": true,
+    "lib": ["es2017", "esnext.asynciterable", "dom", "ES2015"],
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "listFiles": false,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "lib"],
+  "include": ["src"],
+  "compileOnSave": true,
+  "types": ["typePatches"]
+}
