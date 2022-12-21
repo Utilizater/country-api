@@ -25,6 +25,10 @@ app.get('/GetCountryDetails/:countryCode', async (req, res) => {
       state_names: getStatesString(states),
     };
 
+    if (name === '') {
+      res.status(204);
+    }
+
     res.send(response);
   } catch (error) {
     console.log(error);
